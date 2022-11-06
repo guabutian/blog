@@ -6,7 +6,7 @@ set -e
 # Print out commands before executing them
 set -x
 
-printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
+printf "Deploying updates to GitHub...."
 
 # Build the project.
 hugo -t jane -b "https://guabutian.github.io/"
