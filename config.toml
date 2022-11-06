@@ -1,0 +1,131 @@
+###########################################################
+# 站点的全局配置
+#
+###########################################################
+
+## 基础配置
+baseURL = "http://localhost:1313/" # 申请了域名之后，再放到这里来 详细的域名的设置 https://gohugo.io/getting-started/configuration/
+title = "瓜不甜的博客"
+enableRobotsTXT = true
+enableEmoji = true
+theme = "jane"
+
+## 主题设置 
+hasCJKLanguage = true              # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
+paginate = 3                       # Number of articles displayed on the homepage  # 首页每页显示的文章数
+rssLimit = 20                      # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
+disqusShortname = ""               # disqus_shortname
+googleAnalytics = ""               # UA-XXXXXXXX-X
+copyright = ""                     # default: author.name ↓        # 默认为下面配置的author.name ↓
+
+
+# 语言的设置
+defaultContentLanguage = "zh-cn"   # 默认的语言使用
+[Languages.zh-cn]
+  languageCode = "zh-cn"
+
+
+[author]
+  name = "瓜不甜"                    # 必选：每个文章后都有一个
+  url = "/about"                    # 可选：点击之后就跳转到关于
+
+[sitemap]                           # 必需
+  changefreq = "weekly"             # 频率
+  priority = 0.5                    #
+  filename = "sitemap.xml"          #
+
+## 目录配置
+[[menu.main]]                       # 主页的配置:展示最新
+  name = "主页"
+  weight = 20
+  identifier = "home"
+  pageref = "/"
+[[menu.main]]                      # 归档的配置:按时间顺序  
+  name = "归档"
+  weight = 20
+  identifier = "archives"
+  pageref = "/post/"
+[[menu.main]]                      # 标签的配置:按标签分类
+  name = "标签"
+  weight = 20
+  identifier = "tags"
+  pageref = "/tags/"
+[[menu.main]]                      # 分类的配置:按分类进行归类
+  name = "分类"
+  weight = 20
+  identifier = "categories"
+  pageref = "/categories/"
+
+## 建站的配置
+[params]
+  since = "2016"                           # 站点建立时间
+  homeFullContent = false                  # 设置为false的话，会展示概要，否则的话就会展示全文
+  rssFullContent = true                    # 设置为false的话Rss feed 会代替 the summary
+  moreMeta = false                         # 阅读时间
+
+  # 站点信息                                # 站点信息（可选，不需要的可以直接注释掉）
+  logoTitle = "瓜不甜的博客"               # 博客的名字
+  keywords = ["瓜不甜", "hugo","后端"]
+  description = "瓜不甜的个人博客"
+
+  # 这个是时间格式：我使用的中国人读法的时间
+  dateFormatToUse = "2006-01-02"
+
+  ##  一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。
+  toc = false              # 是否开启目录：这个目录太丑了，我希望有个更好看点的目录
+  photoswipe = true        # 是否启用PhotoSwipe（图片可点击）:可以放大等，是必要的 https://github.com/dimsemenov/PhotoSwipe  
+  contentCopyright = '原创文章，如需转载请注明文章作者和出处，谢谢！'
+
+  ## 链接css和js
+  #  位置是 /static/css 和 /static/js 
+  customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
+  customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
+
+
+## 社交账号的配置
+  [params.social]                                                 # 社交链接
+    a-email = "mailto:2351180282@qq.com"                          # 邮件地址
+    g-github = "https://github.com/guabutian"                     # Github地址
+    i-zhihu = "https://www.zhihu.com/people/xing-xin-xiang-yi"    # 知乎地址
+  
+  [params.counter.busuanzi]                            # 不蒜子计数器
+    enable = false 
+
+  [params.reward]                                      # 文章打赏
+    enable = true
+    wechat = "/pay/微信赞赏码.jpg"                       # 微信二维码
+
+  [params.counter.leancloud]  # Chinese leancloud visitor counter  # leancloud 计数器
+    enable = false
+    appId = ""
+    appKey = ""
+
+  [params.commentCount.disqus] # show counts of comments for Disqus
+    enable = false
+
+  # use public git repo url to link lastmod git commit, enableGitInfo should be true.
+  # 指定 git 仓库地址，可以生成指向最近更新的 git commit 的链接，需要将 enableGitInfo 设置成 true.
+  [params.gitInfo]
+    gitRepo = "https://github.com/xianmin/hugo-theme-jane"
+    showCommitMessage = true
+
+[markup]
+  defaultMarkdownHandler = "goldmark"  # blackfriday or goldmark
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  # Highlight options. See https://gohugo.io/content-management/syntax-highlighting/
+  [markup.highlight]
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noHl = false
+    style = 'friendly'
+    tabWidth = 4
