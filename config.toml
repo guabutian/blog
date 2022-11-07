@@ -25,6 +25,12 @@ defaultContentLanguage = "zh-cn"   # 默认的语言使用
 [Languages.zh-cn]
   languageCode = "zh-cn"
 
+# 关于语法高亮，具体使用可查看https://gohugo.io/content-management/syntax-highlighting/
+PygmentsCodeFences = true                      # Enable syntax highlighting with GitHub flavoured code fences
+PygmentsUseClasses = true                      # Use CSS classes to format highlighted code
+PygmentsCodefencesGuessSyntax = true           #
+PygmentsOptions = "linenos=table"              # 开启显示行号
+
 
 [author]
   name = "瓜不甜"                    # 必选：每个文章后都有一个
@@ -62,7 +68,7 @@ defaultContentLanguage = "zh-cn"   # 默认的语言使用
   since = "2016"                           # 站点建立时间
   homeFullContent = false                  # 设置为false的话，会展示概要，否则的话就会展示全文
   rssFullContent = true                    # 设置为false的话Rss feed 会代替 the summary
-  moreMeta = false                         # 阅读时间
+  moreMeta = true                         # 阅读时间
 
   # 站点信息                                # 站点信息（可选，不需要的可以直接注释掉）
   logoTitle = "瓜不甜的博客"               # 博客的名字
@@ -76,12 +82,26 @@ defaultContentLanguage = "zh-cn"   # 默认的语言使用
   toc = false              # 是否开启目录：这个目录太丑了，我希望有个更好看点的目录
   photoswipe = true        # 是否启用PhotoSwipe（图片可点击）:可以放大等，是必要的 https://github.com/dimsemenov/PhotoSwipe  
   contentCopyright = '原创文章，如需转载请注明文章作者和出处，谢谢！'
+  archive-paginate = 15                         # 归档、标签、分类每页显示的文章数目
 
   ## 链接css和js
   #  位置是 /static/css 和 /static/js 
   customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
   customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
-
+  
+# CDN设置
+#-------------------------------------------------------------------
+  [params.publicCDN]        # load these files from public cdn
+    enable = true
+    jquery = '<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>'
+    slideout = '<script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>'
+    gitmentJS = '<script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>'
+    gitmentCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">'
+    photoswipe = '<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.js" integrity="sha256-AC9ChpELidrhGHX23ZU53vmRdz3FhKaN9E28+BbcWBw=" crossorigin="anonymous"></script>'
+    photoswipeUI = '<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js" integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin="anonymous"></script>'
+    photoswipeCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css" integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin="anonymous">'
+    photoswipeSKIN = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css" integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin="anonymous">'
+#-------------------------------------------------------------------
 
 ## 社交账号的配置
   [params.social]                                                 # 社交链接
