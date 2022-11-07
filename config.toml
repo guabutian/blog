@@ -15,8 +15,9 @@ hasCJKLanguage = true              # has chinese/japanese/korean ? # 自动检�
 paginate = 3                       # Number of articles displayed on the homepage  # 首页每页显示的文章数
 rssLimit = 20                      # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
 disqusShortname = ""               # disqus_shortname
-googleAnalytics = ""               # UA-XXXXXXXX-X
-copyright = ""                     # default: author.name ↓        # 默认为下面配置的author.name ↓
+googleAnalytics = "G-Q2LDRYSXG4"   # UA-XXXXXXXX-X  网站分析 https://analytics.google.com/analytics/web/?authuser=1#/p341149650/reports/intelligenthome
+enableGitInfo = true
+
 
 
 # 语言的设置
