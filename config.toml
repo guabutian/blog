@@ -142,7 +142,7 @@ PygmentsOptions = "linenos=table"              # 开启显示行号
     appKey = "B3PTBRA5QMU80G3rgK2PQu1Y"
 
   [params.commentCount.disqus] # show counts of comments for Disqus
-    enable = true       # 暂时关闭，有性能问题
+    enable = false       # 暂时关闭，有性能问题
 
   # use public git repo url to link lastmod git commit, enableGitInfo should be true.
   # 指定 git 仓库地址，可以生成指向最近更新的 git commit 的链接，需要将 enableGitInfo 设置成 true.
