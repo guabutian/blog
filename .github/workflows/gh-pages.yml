@@ -21,7 +21,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify -t jane -b "https://guabutian.github.io/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
