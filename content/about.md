@@ -6,8 +6,8 @@ menu: "main"
 weight: 70
 
 ## 页面功能
-comment: false  # 关闭评论
-mathjax: false  # 关闭数学公式
+comment: true  # 关闭评论
+mathjax: true  # 关闭数学公式
 ---
 > 个人座右铭: 言必信，行必果 
 
