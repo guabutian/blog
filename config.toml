@@ -148,7 +148,7 @@ PygmentsOptions = "linenos=table"              # 开启显示行号
   # 指定 git 仓库地址，可以生成指向最近更新的 git commit 的链接，需要将 enableGitInfo 设置成 true.
   [params.gitInfo]
     gitRepo = "https://github.com/guabutian/guabutian.github.io"
-    showCommitMessage = true
+    showCommitMessage = false
 
 [markup]
   defaultMarkdownHandler = "goldmark"  # blackfriday or goldmark
