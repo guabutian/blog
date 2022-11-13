@@ -21,7 +21,7 @@ jobs:
           extended: true
       
       - name: Clean
-        run: cd public && rm -rf `ls -a | grep -v .git` 2> /dev/null
+        run: cd public && rm -rf `ls -A1 | grep -v .git`
 
       - name: Build
         run: hugo --minify -t jane -b "https://guabutian.github.io/"
