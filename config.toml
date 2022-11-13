@@ -1,23 +1,22 @@
 ###########################################################
 # 站点的全局配置
-#
+# 在配置好了配置之后，尽量少改动配置，防止出现异常
 ###########################################################
 
 ## 基础配置
-baseURL = "http://localhost:1313/" # 申请了域名之后，再放到这里来 详细的域名的设置 https://gohugo.io/getting-started/configuration/
-title = "瓜不甜的博客"
-enableRobotsTXT = true
-enableEmoji = true
-theme = "jane"
+baseURL = "http://localhost:1313/" # 博客的域名：发布的时候改换即可
+title = "瓜不甜的博客"               # 博客标题
+enableRobotsTXT = true             # 允许机器人抓取
+enableEmoji = true                 # 使用emoji表情
+theme = "jane"                     # 使用的jane主题，不要改动
 
 ## 主题设置 
-hasCJKLanguage = true              # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
-paginate = 15                      # Number of articles displayed on the homepage  # 首页每页显示的文章数
-rssLimit = 20                      # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
-disqusShortname = ""      # disqus_shortname  # 暂时关闭，有性能问题
-googleAnalytics = "G-Q2LDRYSXG4"   # UA-XXXXXXXX-X  网站分析 https://analytics.google.com/analytics/web/?authuser=1#/p341149650/reports/intelligenthome
-enableGitInfo = true
-
+hasCJKLanguage = true              # 自动检测是否包含 中文\日文\韩文
+paginate = 15                      # 首页每页显示的文章数
+rssLimit = 20                      # 限制 Rss 文章输出数量
+disqusShortname = ""    
+googleAnalytics = "G-Q2LDRYSXG4"   # 谷歌网站分析 https://analytics.google.com/analytics/web/?authuser=1#/p341149650/reports/intelligenthome
+enableGitInfo = true                   
 
 
 # 语言的设置
