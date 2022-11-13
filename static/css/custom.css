@@ -1,0 +1,14 @@
+/* 不再展示一些不喜欢的下标 */
+#footer > div.copyright > span.power-by {
+    display: none;
+}
+
+/* 不再展示一些不喜欢的下标 */
+#footer > div.copyright > span.division {
+    display: none;
+}
+
+/* 不再展示一些不喜欢的下标 */
+#footer > div.copyright > span.theme-info {
+    display: none;
+}
